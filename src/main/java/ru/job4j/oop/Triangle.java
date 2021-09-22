@@ -18,12 +18,9 @@ public class Triangle {
     }
 
     public boolean exist(double ab, double ac, double bc) {
-        boolean result = false;
-        if ( ab + ac > bc && ab + bc > ac && ac + bc > ab) {
-            result = true;
-        }
-        return result;
+        return ab + ac > bc && ab + bc > ac && ac + bc > ab;
     }
+
     public double area() {
         double rsl = -1;
         double ab = first.distance(second);
