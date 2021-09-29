@@ -1,3 +1,8 @@
+package inheritance;
+
+import inheritance.HtmlReport;
+import inheritance.JSONReport;
+
 public class ReportUsage {
     public static void main(String[] args) {
         HtmlReport report = new HtmlReport();
