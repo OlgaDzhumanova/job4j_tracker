@@ -1,6 +1,14 @@
+package prof;
+
+import prof.Engineer;
+
 public class Builder extends Engineer {
     private String building;
     private String plan;
+
+    public Builder(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
 
     public String getBuilding() {
         return building;

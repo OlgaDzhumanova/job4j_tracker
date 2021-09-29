@@ -1,5 +1,13 @@
+package prof;
+
+import prof.Profession;
+
 public class Doctor extends Profession {
     private String license;
+
+    public Doctor(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
 
     public String qualification(Profession profession) {
         return profession.getEducation();

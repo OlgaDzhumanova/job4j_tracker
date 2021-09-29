@@ -1,9 +1,19 @@
-public class Surgeon extends Doctor {
-    private String operation;
+package prof;
 
-    public String treatment(Doctor doctor) {
-        return doctor.diagnosis(operation);
+import prof.Doctor;
+import prof.Profession;
+
+public class Dentist extends Doctor {
+    private String tooth;
+
+    public Dentist(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
     }
+
+    public String treatment(Doctor doctor){
+        return doctor.diagnosis(tooth);
+    }
+
 
     @Override
     public String getName() {

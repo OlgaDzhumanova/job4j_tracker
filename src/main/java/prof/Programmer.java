@@ -1,6 +1,14 @@
-public class Programmer extends Engineer{
+package prof;
+
+import prof.Engineer;
+
+public class Programmer extends Engineer {
     private String code;
     private String program;
+
+    public Programmer(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
 
     public String getCode() {
         return code;
