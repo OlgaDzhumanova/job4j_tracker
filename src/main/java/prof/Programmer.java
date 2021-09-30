@@ -6,8 +6,11 @@ public class Programmer extends Engineer {
     private String code;
     private String program;
 
-    public Programmer(String name, String surname, String education, String birthday) {
-        super(name, surname, education, birthday);
+    public Programmer(String name, String surname, String education, String birthday, String scheme,
+                      String project, String code, String program) {
+        super(name, surname, education, birthday, scheme, project);
+        this.code = code;
+        this.program = program;
     }
 
     public String getCode() {

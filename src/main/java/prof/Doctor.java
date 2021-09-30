@@ -5,8 +5,9 @@ import prof.Profession;
 public class Doctor extends Profession {
     private String license;
 
-    public Doctor(String name, String surname, String education, String birthday) {
+    public Doctor(String name, String surname, String education, String birthday, String license) {
         super(name, surname, education, birthday);
+        this.license = license;
     }
 
     public String qualification(Profession profession) {

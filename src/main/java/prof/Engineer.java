@@ -6,8 +6,10 @@ public class Engineer extends Profession {
     private String scheme;
     private String project;
 
-    public Engineer(String name, String surname, String education, String birthday) {
+    public Engineer(String name, String surname, String education, String birthday, String scheme, String project) {
         super(name, surname, education, birthday);
+        this.scheme = scheme;
+        this.project = project;
     }
 
     public String getScheme() {
