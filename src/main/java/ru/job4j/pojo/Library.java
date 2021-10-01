@@ -30,7 +30,7 @@ public class Library {
         System.out.println("Search for a book with the title Clean code");
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if (bk.getBook().equals("Clean code")){
+            if ("Clean code".equals(bk.getBook())){
                 System.out.println(bk.getBook() + " - " + bk.getCount());
             }
         }
