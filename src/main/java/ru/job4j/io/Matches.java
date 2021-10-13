@@ -18,6 +18,7 @@ public class Matches {
                 turn = !turn;
             }else {
                 count -= matches;
+                System.out.println("Остаток спичек: " + count);
             }
         }
         if (!turn) {
