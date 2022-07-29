@@ -1,6 +1,8 @@
-package ru.job4j.search;
+package ru.job4j.list.search;
 
 import org.junit.Test;
+import ru.job4j.search.Person;
+import ru.job4j.search.PhoneDictionary;
 
 import java.sql.Array;
 import java.util.ArrayList;
