@@ -1,4 +1,7 @@
 package ru.job4j.collection;
+/*
+исправление
+ */
 
 public class Job implements Comparable<Job> {
     private String name;
