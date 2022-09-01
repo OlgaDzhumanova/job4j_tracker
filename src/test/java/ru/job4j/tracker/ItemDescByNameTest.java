@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
+import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,6 +25,6 @@ public class ItemDescByNameTest {
                 new Item("Chair", 1),
                 new Item("Armchair", 4)
         );
-        assertThat(items, is(expected));
+        assertThat(String.valueOf(items), is(String.valueOf(expected)));
     }
 }
