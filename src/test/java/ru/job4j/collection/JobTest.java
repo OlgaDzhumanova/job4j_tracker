@@ -61,7 +61,7 @@ public class JobTest {
         Comparator<Job> ascByName = new JobAscByName().thenComparing(new JobAscByPriority());
         int rsl = ascByName.compare(
                 new Job("Banker", 1),
-                new Job("Teacher", 2)
+                new Job("Banker", 2)
         );
         assertThat(rsl).isLessThan(1);
     }
