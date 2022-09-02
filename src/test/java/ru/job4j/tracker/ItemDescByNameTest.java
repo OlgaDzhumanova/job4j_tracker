@@ -25,6 +25,6 @@ public class ItemDescByNameTest {
                 new Item("Chair", 1),
                 new Item("Armchair", 4)
         );
-        assertThat(String.valueOf(items), is(String.valueOf(expected)));
+        assertThat(items, is(expected));
     }
 }

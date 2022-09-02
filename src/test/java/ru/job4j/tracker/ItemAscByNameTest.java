@@ -24,6 +24,6 @@ public class ItemAscByNameTest {
                 new Item("Sofa", 2),
                 new Item("Table", 3)
         );
-        assertThat(String.valueOf(items), is(String.valueOf(expected)));
+        assertThat(items, is(expected));
     }
 }
