@@ -5,7 +5,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class AttachmentSort {
-    @SuppressWarnings("checkstyle:GenericWhitespace")
     public static void main(String[] args) {
         List<Attachment> attachments = Arrays.asList(
                 new Attachment("image 1", 100),
