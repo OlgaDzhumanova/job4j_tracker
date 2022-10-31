@@ -9,10 +9,10 @@ public class ProductLabel {
         List<Label> labels = products.stream()
                 .filter(product -> product.getStandard() - product.getActual() >= 0)
                 .filter(product -> product.getStandard() - product.getActual() <= 3)
-                .map(product -> new Label(product.getName(), product.getPrice() / 100 * 50))
+                .map(product -> new Label(product.getName(), (float) (product.getPrice() * 0.5)))
                 .collect(Collectors.toList());
 
-        return (List<String>) labels.stream()
+        return labels.stream()
                 .map(label -> label.toString())
                 .collect(Collectors.toList());
     }
