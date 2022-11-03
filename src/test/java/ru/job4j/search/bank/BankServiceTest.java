@@ -1,6 +1,10 @@
-package ru.job4j.bank;
+package ru.job4j.search.bank;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.bank.Account;
+import ru.job4j.bank.BankService;
+import ru.job4j.bank.User;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
     public class BankServiceTest {
