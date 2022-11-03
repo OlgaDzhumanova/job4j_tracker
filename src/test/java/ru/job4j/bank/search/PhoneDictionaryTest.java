@@ -1,6 +1,9 @@
-package ru.job4j.search;
+package ru.job4j.bank.search;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import ru.job4j.search.Person;
+import ru.job4j.search.PhoneDictionary;
 
 import java.util.ArrayList;
 
@@ -14,6 +17,6 @@ public class PhoneDictionaryTest {
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
         ArrayList<Person> persons = phones.find("Petr");
-        assertThat(persons.get(0).getSurname()).isEqualTo("Arsentev");
+        Assertions.assertThat(persons.get(0).getSurname()).isEqualTo("Arsentev");
     }
 }
