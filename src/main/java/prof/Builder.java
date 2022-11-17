@@ -1,7 +1,5 @@
 package prof;
 
-import prof.Engineer;
-
 public class Builder extends Engineer {
     private String building;
     private String plan;
@@ -30,11 +28,6 @@ public class Builder extends Engineer {
     @Override
     public String getSurname() {
         return super.getSurname();
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
     }
 
     @Override
