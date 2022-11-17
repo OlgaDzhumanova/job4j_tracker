@@ -9,6 +9,7 @@ public class College {
         student.setGroup("Java");
         student.setDateOfAdmission(new Date());
 
-        System.out.println(student.getFullName() + " , " + student.getGroup() + " , " + student.getDateOfAdmission());
+        System.out.println(student.getFullName() + " , " + student.getGroup()
+                + " , " + student.getDateOfAdmission());
     }
 }

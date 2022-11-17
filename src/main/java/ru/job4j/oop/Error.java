@@ -11,7 +11,7 @@ public class Error {
         this.message = message;
     }
 
-    public Error(){
+    public Error() {
     }
 
     public void printInfo() {
@@ -25,7 +25,7 @@ public class Error {
         error.printInfo();
         Error vkontakte = new Error(true, 56, "Привет");
         vkontakte.printInfo();
-        Error odnoklassniki = new Error(true, 6,"В сети");
+        Error odnoklassniki = new Error(true, 6, "В сети");
         odnoklassniki.printInfo();
         Error facebook = new Error(true, 1, "Дома");
         facebook.printInfo();

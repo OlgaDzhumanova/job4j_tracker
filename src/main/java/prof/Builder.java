@@ -6,9 +6,9 @@ public class Builder extends Engineer {
     private String building;
     private String plan;
 
-    public Builder(String name, String surname, String education, String birthday, String scheme,
+    public Builder(String surname, String education, String birthday, String scheme,
                    String project, String building, String plan) {
-        super(name, surname, education, birthday, scheme, project);
+        super(surname, education, birthday, scheme, project);
         this.building = building;
         this.plan = plan;
     }
@@ -17,12 +17,12 @@ public class Builder extends Engineer {
         return building;
     }
 
-    public Engineer finalPlan ( Engineer engineer){
+    public Engineer finalPlan(Engineer engineer) {
         engineer.design(plan);
         return engineer;
     }
 
-    public Engineer complectedProject( Engineer engineer){
+    public Engineer complectedProject(Engineer engineer) {
         engineer.produce(building);
         return engineer;
     }

@@ -9,7 +9,7 @@ public class Book {
         this.count = count;
     }
 
-    public Book(){
+    public Book() {
 
     }
 

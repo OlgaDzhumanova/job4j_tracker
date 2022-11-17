@@ -5,8 +5,8 @@ import prof.Profession;
 public class Doctor extends Profession {
     private String license;
 
-    public Doctor(String name, String surname, String education, String birthday, String license) {
-        super(name, surname, education, birthday);
+    public Doctor(String surname, String education, String birthday, String license) {
+        super(surname, education, birthday);
         this.license = license;
     }
 
@@ -14,10 +14,12 @@ public class Doctor extends Profession {
         return profession.getEducation();
     }
 
-    public String workPermit( String license){
-        return this.license = license;
+    public String workPermit(String license) {
+        this.license = license;
+        return license;
     }
-    public String diagnosis (String dia){
+
+    public String diagnosis(String dia) {
         return dia;
     }
 }

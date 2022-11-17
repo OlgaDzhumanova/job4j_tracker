@@ -12,7 +12,7 @@ public class Library {
           books[1] = novel;
           books[2] = fantasy;
           books[3] = instruct;
-          for (int index = 0; index < books.length; index++){
+          for (int index = 0; index < books.length; index++) {
               Book bk = books[index];
               System.out.println(bk.getBook() + " - " + bk.getCount());
           }
@@ -22,7 +22,7 @@ public class Library {
           clear = books[0];
           books[0] = books[3];
           books[3] = clear;
-          for (int i = 0; i < books.length ; i++) {
+          for (int i = 0; i < books.length; i++) {
               Book bk = books[i];
               System.out.println(bk.getBook() + " - " + bk.getCount());
         }
@@ -30,7 +30,7 @@ public class Library {
         System.out.println("Search for a book with the title Clean code");
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if ("Clean code".equals(bk.getBook())){
+            if ("Clean code".equals(bk.getBook())) {
                 System.out.println(bk.getBook() + " - " + bk.getCount());
             }
         }

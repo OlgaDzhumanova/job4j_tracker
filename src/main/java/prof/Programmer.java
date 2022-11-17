@@ -6,9 +6,9 @@ public class Programmer extends Engineer {
     private String code;
     private String program;
 
-    public Programmer(String name, String surname, String education, String birthday, String scheme,
+    public Programmer(String surname, String education, String birthday, String scheme,
                       String project, String code, String program) {
-        super(name, surname, education, birthday, scheme, project);
+        super(surname, education, birthday, scheme, project);
         this.code = code;
         this.program = program;
     }
@@ -21,13 +21,12 @@ public class Programmer extends Engineer {
         return program;
     }
 
-
-    public Engineer sourceCode (Engineer engineer){
+    public Engineer sourceCode(Engineer engineer) {
         engineer.design(code);
         return engineer;
     }
 
-    public Engineer finalProgram (Engineer engineer){
+    public Engineer finalProgram(Engineer engineer) {
         engineer.produce(program);
         return engineer;
     }
@@ -35,11 +34,6 @@ public class Programmer extends Engineer {
     @Override
     public String getSurname() {
         return super.getSurname();
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
     }
 
     @Override
