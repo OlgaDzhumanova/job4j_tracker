@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static ru.job4j.collection.Departments.sortAsc;
+import static ru.job4j.collection.Departments.sortDesc;
 
 public class DepartmentsTest {
 
@@ -48,7 +50,7 @@ public class DepartmentsTest {
                 "K2/SK1/SSK1",
                 "K2/SK1/SSK2"
         );
-        Departments.sortAsc(input);
+        sortAsc(input);
         assertThat(input).containsAll(expect);
     }
 
@@ -70,7 +72,7 @@ public class DepartmentsTest {
                 "K2/SK1/SSK1",
                 "K2/SK1/SSK2"
         );
-        Departments.sortAsc(input);
+        sortAsc(input);
         assertThat(input).containsAll(expect);
     }
 
@@ -98,7 +100,7 @@ public class DepartmentsTest {
                 "K1/SK1/SSK2",
                 "K1/SK2"
         );
-        Departments.sortDesc(input);
+        sortDesc(input);
         assertThat(input).containsAll(expect);
     }
 
@@ -122,7 +124,7 @@ public class DepartmentsTest {
                 "K1/SK1/SSK2",
                 "K1/SK2"
         );
-        Departments.sortDesc(input);
+        sortDesc(input);
         assertThat(input).containsAll(expect);
     }
 }

@@ -16,10 +16,11 @@ public class Departments {
     }
 
     public static void sortAsc(List<String> orgs) {
-        Collections.sort(orgs);
+        Arrays.sort(orgs.toArray());
     }
 
     public static void sortDesc(List<String> orgs) {
-        Collections.sort(orgs, new DepDescComp());
+        DepDescComp depDescComp = new DepDescComp();
+        Arrays.sort(new DepDescComp[]{depDescComp});
     }
 }
