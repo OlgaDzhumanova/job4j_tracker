@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class PhoneDictionaryTest {
     @Test
     public void whenFindByName() {
-        var phones = new PhoneDictionary();
+        PhoneDictionary phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
