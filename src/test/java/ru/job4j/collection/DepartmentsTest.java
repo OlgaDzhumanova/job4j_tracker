@@ -50,7 +50,7 @@ public class DepartmentsTest {
                 "K2/SK1/SSK1",
                 "K2/SK1/SSK2"
         );
-        sortAsc(input);
+        Departments.sortAsc(input);
         assertThat(input).containsAll(expect);
     }
 
@@ -72,7 +72,7 @@ public class DepartmentsTest {
                 "K2/SK1/SSK1",
                 "K2/SK1/SSK2"
         );
-        sortAsc(input);
+        Departments.sortAsc(input);
         assertThat(input).containsAll(expect);
     }
 
@@ -100,7 +100,7 @@ public class DepartmentsTest {
                 "K1/SK1/SSK2",
                 "K1/SK2"
         );
-        sortDesc(input);
+        Departments.sortDesc(input);
         assertThat(input).containsAll(expect);
     }
 
@@ -124,7 +124,7 @@ public class DepartmentsTest {
                 "K1/SK1/SSK2",
                 "K1/SK2"
         );
-        sortDesc(input);
+        Departments.sortDesc(input);
         assertThat(input).containsAll(expect);
     }
 }
