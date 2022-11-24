@@ -1,7 +1,6 @@
 package ru.job4j.streammapto;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class MapToIntExample {
     public static void main(String[] args) {
@@ -24,5 +23,26 @@ public class MapToIntExample {
                 .peek(System.out::println)
                 .sum();
         System.out.println("Сумма: " + sum);
+
+        Optional<Person> youngestPerson = people.stream()
+                .min(Comparator.comparing(Person::getAge));
+        int age = youngestPerson.get().getAge();
+        System.out.println(age);
+
+        Optional<Person> youngestPersonOther = people.stream()
+                .max(Comparator.comparing(Person::getAge));
+        int ageOther = youngestPersonOther.get().getAge();
+        System.out.println(ageOther);
+
+        OptionalDouble average = people.stream()
+                .mapToInt(Person::getAge)
+                .average();
+        double avg = average.getAsDouble();
+        System.out.println("среднее арифметическое всех элементов: " + avg);
+
+        int sumOther = people.stream()
+                .mapToInt(Person::getAge)
+                .sum();
+        System.out.println(sumOther);
     }
 }
