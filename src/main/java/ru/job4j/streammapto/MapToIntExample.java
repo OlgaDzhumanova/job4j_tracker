@@ -44,5 +44,19 @@ public class MapToIntExample {
                 .mapToInt(Person::getAge)
                 .sum();
         System.out.println(sumOther);
+
+        int sum1 = people.stream()
+                .reduce(
+                        0,
+                        (a, b) -> {
+                            if (b.getAge() > 25) {
+                                return a + b.getAge();
+                            } else {
+                                return a;
+                            }
+                        },
+                        (a, b) -> a + b
+                );
+        System.out.println(sum1);
     }
 }
