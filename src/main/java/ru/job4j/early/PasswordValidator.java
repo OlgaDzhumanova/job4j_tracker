@@ -30,6 +30,9 @@ public class PasswordValidator {
             if (symbol >= 33 && symbol <= 47) {
                 specialSymbol = 1;
             }
+            if (upperSymbol == 1 && lowerSymbol == 1 && digitSymbol == 1 && specialSymbol == 1) {
+                break;
+            }
         }
 
         if (upperSymbol == 0) {
