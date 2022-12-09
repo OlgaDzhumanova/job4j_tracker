@@ -11,18 +11,41 @@ public class PasswordValidator {
         if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
-        if (!isUpperCasePassword(password)) {
+
+        char[] symbols = password.toCharArray();
+        int upperSymbol = 0;
+        int lowerSymbol = 0;
+        int digitSymbol = 0;
+        int specialSymbol = 0;
+        for (char symbol : symbols) {
+            if (isUpperCase(symbol)) {
+                upperSymbol = 1;
+            }
+            if (isLowerCase(symbol)) {
+                lowerSymbol = 1;
+            }
+            if (isDigit(symbol)) {
+                digitSymbol = 1;
+            }
+            if (symbol >= 33 && symbol <= 47) {
+                specialSymbol = 1;
+            }
+        }
+
+        if (upperSymbol == 0) {
             throw new IllegalArgumentException("Password should contain "
                     + "at least one uppercase letter");
         }
-        if (!isLowerCasePassword(password)) {
+        if (lowerSymbol == 0) {
             throw new IllegalArgumentException("Password should contain "
                     + "at least one lowercase letter");
         }
-        if (!isDigitPassword(password)) {
+
+        if (digitSymbol == 0) {
             throw new IllegalArgumentException("Password should contain at least one figure");
         }
-        if (!isSymbolsPassword(password)) {
+
+        if (specialSymbol == 0) {
             throw new IllegalArgumentException("Password should contain "
                     + "at least one special symbol");
         }
@@ -35,49 +58,5 @@ public class PasswordValidator {
             }
         }
         return password;
-    }
-
-    public static boolean isUpperCasePassword(String p) {
-        boolean result = false;
-        char[] symbols = p.toCharArray();
-        for (char ch : symbols) {
-            if (isUpperCase(ch)) {
-                result = true;
-            }
-        }
-        return result;
-    }
-
-    public static boolean isLowerCasePassword(String p) {
-        boolean result = false;
-        char[] symbols = p.toCharArray();
-        for (char ch : symbols) {
-            if (isLowerCase(ch)) {
-                result = true;
-            }
-        }
-        return result;
-    }
-
-    public static boolean isDigitPassword(String p) {
-        boolean result = false;
-        char[] symbols = p.toCharArray();
-        for (char ch : symbols) {
-            if (isDigit(ch)) {
-                result = true;
-            }
-        }
-        return result;
-    }
-
-    public static boolean isSymbolsPassword(String p) {
-        boolean result = false;
-        char[] symbols = p.toCharArray();
-        for (char ch : symbols) {
-            if (ch >= 33 && ch <= 47) {
-                result = true;
-            }
-        }
-        return result;
     }
 }
