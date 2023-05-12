@@ -22,7 +22,7 @@ public class ReconstructPhrase {
             }
             evenElements.poll();
         }
-        return String.valueOf(result);
+        return result.toString();
     }
 
     private String getDescendingElements() {
@@ -31,7 +31,7 @@ public class ReconstructPhrase {
         for (int i = 0; i < count; i++) {
             result.append(descendingElements.pollLast());
         }
-        return String.valueOf(result);
+        return result.toString();
     }
 
     public String getReconstructPhrase() {
